@@ -1,0 +1,29 @@
+calcFst computes Weir and Cockerham (1984) Fst.
+
+to compile:
+gcc -c src/Fst_geno.c
+gcc -c src/get_geno.c
+gcc -c src/read_params.c
+gcc src/calcFst.c *.o -o calcFst
+
+to run:
+if the data consists chromosomes with SNPs coded with 0/1
+./calFst HAPLOID 
+-i "File containing the genotypes"
+-p "File containing the population of each individual coded from 1 to n"
+-o "output file with the Fst". Default is Fsts
+
+if the data consists of genotypes with SNPs coded with 0/1/2
+./calFst DIPLOID
+-i "File containing the genotypes"
+-p "File containing the population of each individual coded from 1 to n"
+-o "output file with the Fst". Default is Fsts
+
+let nIND be the number of individuals in the data.
+genotype file contains one row per snp. markers are separated by a white blank. If data are Diploid, nIND values per line. If Data are Haploid nIND*2 values per line.
+
+Population file contains one row with the population of each individual coded from 1 to n. This file must contain nIND values, whether data are Diploid or Haploid.
+
+
+EXAMPLE:
+./calcFst HAPLO -i Example/Data_Haplo -p Example/Pops.txt
