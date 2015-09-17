@@ -4,6 +4,7 @@
 #include "get_geno.h"
 #include "Fst_geno.h"
 
+
 int main(int argc, char *argv[]){
 
 	char *popfile = malloc(sizeof(char)*256);
