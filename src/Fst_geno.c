@@ -40,6 +40,6 @@ h_bar = 0;
 	double b = (n_bar/(n_bar - 1.0))*(p_bar*(1.0 - p_bar) - ((nPOP - 1.0)/nPOP)*s2 - h_bar*(2*n_bar - 1)/(4*n_bar));
 	double c = h_bar/2.0;
 
-	return a/(a + b + c);
+	return a;
 
 }
