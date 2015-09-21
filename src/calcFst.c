@@ -4,8 +4,10 @@
 #include "get_geno.h"
 #include "Fst_geno.h"
 
-
-
+//This program calculates Weir and Cockerham's Fst estimate per locus
+//-i input file
+//-p Pop file
+//-o output file
 
 int main(int argc, char *argv[]){
 
